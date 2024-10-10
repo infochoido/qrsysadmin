@@ -1,23 +1,13 @@
-import logo from './logo.svg';
 import './App.css';
+import FullOrdered from './pages/full_ordered';
+import OrderedList from './pages/ordered_list';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App flex border">
+      <section className='w-[50%]'><OrderedList /></section>
+      <div className="divider"></div> {/* 구분선 추가 */}
+      <section className='w-[50%]'><FullOrdered /></section>
     </div>
   );
 }
