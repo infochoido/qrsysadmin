@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { collection, onSnapshot } from "firebase/firestore"; // onSnapshot을 import합니다.
 import { db } from "../firebase";
+import BasicModal from "./modal";
 
 export default function FullOrdered() {
   const [orders, setOrders] = useState([]);
@@ -44,6 +45,7 @@ export default function FullOrdered() {
   return (
     <div className="w-full p-4">
       <h2 className="text-xl font-bold mb-4">전체 테이블 별 주문 현황</h2>
+      <BasicModal />
       {Object.keys(groupedOrders).length > 0 ? (
         Object.keys(groupedOrders).map((tableId) => (
           <div key={tableId} className="border border-gray-300 p-4 mb-4 rounded-md">

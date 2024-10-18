@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { collection, onSnapshot, query, orderBy } from "firebase/firestore";
 import { db } from "../firebase";
 import dayjs from "dayjs"; // 날짜 포맷팅을 위한 라이브러리
+import BasicModal from "./modal";
 
 export default function OrderedList() {
   const [orders, setOrders] = useState([]);
@@ -40,7 +41,7 @@ export default function OrderedList() {
 
   return (
     <div className="w-full p-4">
-      <h2 className="text-xl font-bold mb-4">테이블 별 주문 목록</h2>
+      <h2 className="text-xl font-bold mb-4">테이블 별 주문 목록  </h2>
       {orders.length > 0 ? (
         <ul className="w-full">
           {orders.map((order) => (
