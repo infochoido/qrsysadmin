@@ -53,11 +53,11 @@ export default function FullOrdered() {
             <ul>
               {Object.entries(groupedOrders[tableId].items).map(([itemName, itemDetails], index) => (
                 <li key={index} className="mb-1">
-                  {itemName} (수량: {itemDetails.quantity}, 가격: {itemDetails.price} ₩)
+                  {itemName} (수량: {itemDetails.quantity}, 가격: {itemDetails.price} 장)
                 </li>
               ))}
             </ul>
-            <p className="font-semibold">총 가격: {groupedOrders[tableId].totalPrice} ₩</p>
+            <p className="font-semibold">총 가격: {groupedOrders[tableId].totalPrice} 장</p>
           </div>
         ))
       ) : (

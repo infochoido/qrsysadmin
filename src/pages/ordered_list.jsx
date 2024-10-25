@@ -55,11 +55,11 @@ export default function OrderedList() {
                   주문 시간: {dayjs(order.timestamp.toDate()).format("YYYY-MM-DD HH:mm")}
                 </span>
               </div>
-              <p className="font-semibold mb-2">총 가격: {order.totalPrice} ₩</p>
+              <p className="font-semibold mb-2">총 가격: {order.totalPrice} 장</p>
               <ul className="ml-4">
                 {order.orders.map((item, index) => (
                   <li key={index} className="mb-1">
-                    {item.name} (수량: {item.quantity}, 가격: {item.price} ₩)
+                    {item.name} (수량: {item.quantity}, 가격: {item.price} 장)
                   </li>
                 ))}
               </ul>

@@ -71,7 +71,7 @@ export default function BasicModal() {
             {menuItems.length > 0 ? (
               menuItems.map((item) => (
                 <Box key={item.id} className="flex justify-between mb-2">
-                  <Typography>{item.name} (₩{item.price})</Typography>
+                  <Typography>{item.name} ({item.price}장)</Typography>
                   <Button
                     variant="contained"
                     color={item.available ? 'primary' : 'secondary'}
